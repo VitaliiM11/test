@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Push'){
             steps{
-                sh 'docker push hbsg/html:latest'
+                sh 'docker push vitalii/html:latest'
             }
         }
     }
