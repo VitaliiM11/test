@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('hbsg-dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('vitalii-dockerhub')
     }
     stages {
         stage('Docker version') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t hbsg/html:latest .'
+                sh 'docker build -t vitalii/html:latest .'
             }
         }
         stage('Login') {
